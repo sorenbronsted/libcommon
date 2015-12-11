@@ -1,0 +1,16 @@
+{
+  "name": "ufds/libcommon",
+  "description": "UFDS common library",
+  "license": "UFDS privat",
+  "config": {
+    "platform": {
+      "php": "5.3.10"
+    }
+  },
+
+  "autoload": {
+    "classmap": ["common/"]
+  }
+
+}
+
