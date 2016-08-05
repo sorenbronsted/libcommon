@@ -1,4 +1,5 @@
 <?php
+namespace ufds;
 
 class ValidationException extends ApplicationException {
   private $errors;
