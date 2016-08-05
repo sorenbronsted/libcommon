@@ -4,12 +4,12 @@
   "license": "UFDS privat",
   "config": {
     "platform": {
-      "php": "5.3.10"
+      "php": "5.4"
     }
   },
 
   "autoload": {
-    "classmap": ["common/"]
+    "psr-4" : { "ufds\\": ["common/"] }
   }
 
 }
