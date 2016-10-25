@@ -22,7 +22,8 @@ class ValidationException extends ApplicationException {
   }
 
   public function errors() {
-    return array(__CLASS__ => $this->errors);
+  	$class = explode('\\', __CLASS__)[1]; // strip off namespace
+    return array($class => $this->errors);
   }
   
   public function toString() {
