@@ -2,7 +2,7 @@
   "name": "sbronsted/libcommon",
   "type": "library",
   "description": "Shared classes",
-  "license": "GPL3",
+  "license": "MIT",
   "homepage": "https://github.com/sorenbronsted/libcommon",
   "authors": [
     {
