@@ -1,5 +1,5 @@
 <?php
-namespace ufds;
+namespace sbronsted;
 
 class MandatoryException extends ApplicationException {
   public function __construct($name) {

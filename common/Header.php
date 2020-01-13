@@ -1,5 +1,5 @@
 <?php
-namespace ufds;
+namespace sbronsted;
 
 class Header {
 	public function out($text) {

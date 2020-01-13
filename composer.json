@@ -1,16 +1,15 @@
 {
-  "name": "ufds/libcommon",
-  "description": "UFDS common library",
-  "license": "UFDS privat",
+  "name": "sbronsted/libcommon",
+  "description": "Shared classes",
+  "license": "GPL3",
   "config": {
     "platform": {
       "php": "5.4"
-    },
-    "secure-http": false
+    }
   },
 
   "autoload": {
-    "psr-4" : { "ufds\\": ["common/"] }
+    "psr-4" : { "sbronsted\\": ["common/"] }
   }
 
 }

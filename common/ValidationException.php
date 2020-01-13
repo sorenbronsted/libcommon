@@ -1,5 +1,5 @@
 <?php
-namespace ufds;
+namespace sbronsted;
 
 class ValidationException extends ApplicationException {
   private $errors;

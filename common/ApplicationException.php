@@ -1,6 +1,5 @@
 <?php
-
-namespace ufds;
+namespace sbronsted;
 
 use Exception;
 

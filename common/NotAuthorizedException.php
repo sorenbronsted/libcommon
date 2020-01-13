@@ -1,5 +1,5 @@
 <?php
-namespace ufds;
+namespace sbronsted;
 
 class NotAuthorizedException extends ApplicationException {
 	public function __construct() {
