@@ -1,2 +1,15 @@
-*~
 .idea
+build
+debian/files
+debian/*debhelper*
+debian/*substvars*
+doc/coverage
+vendor
+public/client/.packages
+public/client/packages
+public/client/main.dart.*
+*.sql.gz
+*.tgz
+*~
+bin/packages
+.phpunit.result.cache
