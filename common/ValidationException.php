@@ -28,9 +28,16 @@ class ValidationException extends ApplicationException {
 	}
 
 	/**
+	 * @return array
+	 * 	The validations
+	 */
+	public function validations() : array {
+		return $this->validations;
+	}
+	/**
 	 * Transform this class to the following json format:
 	 * ```
-	 * [{"property":"some_property", "msg":"some_message", "type":"error|warning", "class":"SomePrperty"}, ...]
+	 * [{"property":"some_property", "msg":"some_message", "type":"error|warning", "class":"SomeProperty"}, ...]
 	 * ```
 	 *
 	 * @return false|string

@@ -23,5 +23,7 @@ class ValidationExceptionTest extends TestCase {
 		$this->assertStringContainsString('zipcode', $e);
 		$this->assertStringContainsString('This zipcode is not valid', $e);
 		$this->assertStringContainsString('warning', $e);
+
+		$this->assertEquals(2, count($e->validations()));
 	}
 }
