@@ -22,8 +22,7 @@ class ValidationException extends ApplicationException
     /**
      * ValidationException constructor.
      *
-     * @param string $cls
-     *    The name of the class for the properties that will be added by the add methods.
+     * @param string $cls  The name of the class for the properties that will be added by the add methods.
      */
     public function __construct(string $cls)
     {
@@ -33,10 +32,6 @@ class ValidationException extends ApplicationException
         $this->warnings = [];
     }
 
-    /**
-     * @return array
-     *    The validations
-     */
     public function validations(): array
     {
         return array_merge($this->errors, $this->warnings);
@@ -48,8 +43,7 @@ class ValidationException extends ApplicationException
      * [{"property":"some_property", "msg":"some_message", "type":"error|warning", "class":"SomeProperty"}, ...]
      * ```
      *
-     * @return string
-     *    json encoded array of validations
+     * @return string   json encoded array of validations
      */
     public function toJson(): string
     {
@@ -58,56 +52,31 @@ class ValidationException extends ApplicationException
         return $json ? $json : '{}';
     }
 
-    /**
-     * Delegates to @return false|string
-     *
-     * @see toJson
-     */
     public function __toString(): string
     {
         return $this->toJson();
     }
 
-    /**
-     * Test whether some validations has been added.
-     *
-     * @return bool
-     *    true if some validations has been added, otherwise false
-     */
     public function hasValidations(): bool
     {
         return $this->hasErrors() | $this->hasWarnings();
     }
 
-    /**
-     * Test whether errors has been added.
-     *
-     * @return bool
-     *    true if some errors has been added, otherwise false
-     */
     public function hasErrors(): bool
     {
         return count($this->errors) > 0;
     }
 
-    /**
-     * Test whether warnings has been added.
-     *
-     * @return bool
-     *    true if some errors has been added, otherwise false
-     */
     public function hasWarnings(): bool
     {
         return count($this->warnings) > 0;
     }
 
     /**
-     * Adds a error validation
+     * Add an error validation
      *
-     * @param string $property
-     *    A property belowing to @cls
-     * @param string $msg
-     *    The message to the user
+     * @param string $property  A property belowing to @cls
+     * @param string $msg       The message to the user
      */
     public function addError(string $property, string $msg): void
     {
@@ -120,12 +89,10 @@ class ValidationException extends ApplicationException
     }
 
     /**
-     * Adds a waring validation
+     * Add a warning validation
      *
-     * @param string $property
-     *    A property belowing to @cls
-     * @param string $msg
-     *    The message to the user
+     * @param string $property A property belonging to @cls
+     * @param string $msg      The message to the user
      */
     public function addWarning(string $property, string $msg): void
     {
